@@ -2,7 +2,9 @@
   "$schema": "https://json.schemastore.org/package",
   "name": "keywind",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "npm run build:email && npm run build:login",
+    "build:email": "vite-node scripts/build.email",
+    "build:login": "tsc && vite build",
     "build:jar": "vite-node scripts/build",
     "dev": "vite build --watch",
     "test": "mvn test"
